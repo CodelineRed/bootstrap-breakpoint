@@ -1,6 +1,6 @@
 {
     "name": "bootstrap-breakpoint",
-    "version": "0.0.1-dev",
+    "version": "1.0.0-dev",
     "description": "Plugin to write JS conditions in interaction with Bootstrap breakpoints",
     "keywords": [
         "jquery",

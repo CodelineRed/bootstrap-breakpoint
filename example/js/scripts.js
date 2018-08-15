@@ -7,85 +7,106 @@
     $(window).resize(function() {
         $('.current-up').text('');
         $('.current-down').text('');
+        $('.current-only').text('');
         $('.current-between').text('');
         
-        if ($.bootstrapBreakpoint('up', 'xs')) {
+        if (bootstrapBreakpoint('up', 'xs')) {
             $('.current-up').append('XS');
         }
         
-        if ($.bootstrapBreakpoint('up', 'sm')) {
+        if (bootstrapBreakpoint('up', 'sm')) {
             $('.current-up').append(', SM');
         }
         
-        if ($.bootstrapBreakpoint('up', 'md')) {
+        if (bootstrapBreakpoint('up', 'md')) {
             $('.current-up').append(', MD');
         }
         
-        if ($.bootstrapBreakpoint('up', 'lg')) {
+        if (bootstrapBreakpoint('up', 'lg')) {
             $('.current-up').append(', LG');
         }
         
-        if ($.bootstrapBreakpoint('up', 'xl')) {
+        if (bootstrapBreakpoint('up', 'xl')) {
             $('.current-up').append(', XL');
         }
         
-        if ($.bootstrapBreakpoint('down', 'xs')) {
+        if (bootstrapBreakpoint('down', 'xs')) {
             $('.current-down').append('XS, ');
         }
         
-        if ($.bootstrapBreakpoint('down', 'sm')) {
+        if (bootstrapBreakpoint('down', 'sm')) {
             $('.current-down').append('SM, ');
         }
         
-        if ($.bootstrapBreakpoint('down', 'md')) {
+        if (bootstrapBreakpoint('down', 'md')) {
             $('.current-down').append('MD, ');
         }
         
-        if ($.bootstrapBreakpoint('down', 'lg')) {
+        if (bootstrapBreakpoint('down', 'lg')) {
             $('.current-down').append('LG, ');
         }
         
-        if ($.bootstrapBreakpoint('down', 'xl')) {
+        if (bootstrapBreakpoint('down', 'xl')) {
             $('.current-down').append('XL');
         }
         
-        if ($.bootstrapBreakpoint('between', ['xs','sm'])) {
+        if (bootstrapBreakpoint('only', 'xs')) {
+            $('.current-only').text('XS');
+        }
+        
+        if (bootstrapBreakpoint('only', 'sm')) {
+            $('.current-only').text('SM');
+        }
+        
+        if (bootstrapBreakpoint('only', 'md')) {
+            $('.current-only').text('MD');
+        }
+        
+        if (bootstrapBreakpoint('only', 'lg')) {
+            $('.current-only').text('LG');
+        }
+        
+        if (bootstrapBreakpoint('only', 'xl')) {
+            $('.current-only').text('XL');
+        }
+        
+        if (bootstrapBreakpoint('between', ['xs','sm'])) {
             $('.current-between').append('XS - SM<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['xs','md'])) {
+        if (bootstrapBreakpoint('between', ['xs','md'])) {
             $('.current-between').append('XS - MD<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['xs','lg'])) {
+        if (bootstrapBreakpoint('between', ['xs','lg'])) {
             $('.current-between').append('XS - LG<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['xs','xl'])) {
+        if (bootstrapBreakpoint('between', ['xs','xl'])) {
             $('.current-between').append('XS - XL<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['sm','md'])) {
+        if (bootstrapBreakpoint('between', ['sm','md'])) {
             $('.current-between').append('SM - MD<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['sm','lg'])) {
+        if (bootstrapBreakpoint('between', ['sm','lg'])) {
             $('.current-between').append('SM - LG<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['sm','xl'])) {
+        if (bootstrapBreakpoint('between', ['sm','xl'])) {
             $('.current-between').append('SM - XL<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['md','lg'])) {
+        if (bootstrapBreakpoint('between', ['md','lg'])) {
             $('.current-between').append('MD - LG<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['md','xl'])) {
+        if (bootstrapBreakpoint('between', ['md','xl'])) {
             $('.current-between').append('MD - XL<br/>');
         }
         
-        if ($.bootstrapBreakpoint('between', ['lg','xl'])) {
+        if (bootstrapBreakpoint('between', ['lg','xl'])) {
             $('.current-between').append('LG - XL<br/>');
         }
     });
