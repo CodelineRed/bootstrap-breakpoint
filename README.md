@@ -4,6 +4,8 @@ This is a JavaScript variant of the [SCSS mixins](https://github.com/twbs/bootst
 
 See also [Responsive Breakpoints](https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints).
 
+Works only with Bootstrap 4.
+
 ## Available at [NPM](https://www.npmjs.com/package/bootstrap-breakpoint)
 
 ```bash
@@ -27,7 +29,7 @@ if (bootstrapBreakpoint('down', 'lg')) {
 }
 
 if (bootstrapBreakpoint('between', ['sm','lg'])) {
-    // code if window width is is greater equal than sm and lower than lg
+    // code if window width is greater equal sm and lower than lg
 }
 
 if (bootstrapBreakpoint('only', 'xs')) {
