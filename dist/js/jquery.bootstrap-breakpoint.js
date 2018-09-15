@@ -90,26 +90,28 @@
         return BootstrapBreakpoint.breakpoints.indexOf(breakpoint) > -1;
         }
     };
-    
+    BootstrapBreakpoint.init();
+
+    /**
+     * Returns true if arguments fits bootstrap breakpoint
+     * 
+     * @param {string} mode
+     * @param {string|object} breakpoint
+     * @returns {boolean}
+     */
     $.bootstrapBreakpoint = function(mode, breakpoint) {
-        var result = false;
-        
         switch(mode) {
             case 'up':
-                result = BootstrapBreakpoint.up(breakpoint);
-                break;
+                return BootstrapBreakpoint.up(breakpoint);
             case 'down':
-                result = BootstrapBreakpoint.down(breakpoint);
-                break;
+                return BootstrapBreakpoint.down(breakpoint);
             case 'between':
-                result = BootstrapBreakpoint.between(breakpoint);
-                break;
+                return BootstrapBreakpoint.between(breakpoint);
             case 'only':
-                result = BootstrapBreakpoint.only(breakpoint);
-                break;
+                return BootstrapBreakpoint.only(breakpoint);
             default:
         }
-        
-        return result;
+
+        return false;
     };
 })(jQuery);

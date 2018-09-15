@@ -45,5 +45,5 @@ gulp.task('default', ['js', 'js-jquery', 'watch'], function() {
         proxy: localServer
     });
 
-    gulp.watch(distPath + '**/*.{js}').on('change', browserSync.reload);
+    gulp.watch(distPath + '**/*.js').on('change', browserSync.reload);
 });

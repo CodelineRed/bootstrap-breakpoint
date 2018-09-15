@@ -90,6 +90,7 @@
         return BootstrapBreakpoint.breakpoints.indexOf(breakpoint) > -1;
         }
     };
+    BootstrapBreakpoint.init();
 
     /**
      * Returns true if arguments fits bootstrap breakpoint
