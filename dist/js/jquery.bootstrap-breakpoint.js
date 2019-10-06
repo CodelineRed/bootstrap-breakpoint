@@ -1,5 +1,6 @@
+var BootstrapBreakpoint;
 (function($) {
-    var BootstrapBreakpoint = {
+    BootstrapBreakpoint = {
         breakpoints: ['xs','sm','md','lg','xl'],
         
         /**
@@ -8,14 +9,21 @@
          * @returns {undefined}
          */
         init: function() {
+            if ($('.bsbp-container').length !== 0) {
+                $('.bsbp-container').remove();
+            }
+            
             if ($('.bsbp-container').length === 0) {
-                var template = '<div class="bsbp-container">' +
-                    '<div class="d-xs-block"></div>' +
-                    '<div class="d-none d-sm-block"></div>' +
-                    '<div class="d-none d-md-block"></div>' +
-                    '<div class="d-none d-lg-block"></div>' +
-                    '<div class="d-none d-xl-block"></div>' +
-                '</div>';
+                var template = '<div class="bsbp-container">';
+                for (var i = 0; i < BootstrapBreakpoint.breakpoints.length; i++) {
+                    if (i === 0) {
+                        template += '<div class="d-' + BootstrapBreakpoint.breakpoints[i] + '-block"></div>';
+                    } else {
+                        template += '<div class="d-none d-' + BootstrapBreakpoint.breakpoints[i] + '-block"></div>';
+                    }
+                }
+                template += '</div>';
+                
                 $('body').append(template);
             }
         },

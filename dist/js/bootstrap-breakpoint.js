@@ -7,14 +7,21 @@ var BootstrapBreakpoint = {
      * @returns {undefined}
      */
     init: function() {
+        if (document.querySelector('.bsbp-container') !== null) {
+            document.querySelector('.bsbp-container').remove();
+        }
+        
         if (document.querySelector('.bsbp-container') === null) {
-            var template = '<div class="bsbp-container">' +
-                    '<div class="d-xs-block"></div>' +
-                    '<div class="d-none d-sm-block"></div>' +
-                    '<div class="d-none d-md-block"></div>' +
-                    '<div class="d-none d-lg-block"></div>' +
-                    '<div class="d-none d-xl-block"></div>' +
-                '</div>';
+            var template = '<div class="bsbp-container">';
+            for (var i = 0; i < BootstrapBreakpoint.breakpoints.length; i++) {
+                if (i === 0) {
+                    template += '<div class="d-' + BootstrapBreakpoint.breakpoints[i] + '-block"></div>';
+                } else {
+                    template += '<div class="d-none d-' + BootstrapBreakpoint.breakpoints[i] + '-block"></div>';
+                }
+            }
+            template += '</div>';
+                
             document.querySelector('body').insertAdjacentHTML('beforeend', template);
         }
     },

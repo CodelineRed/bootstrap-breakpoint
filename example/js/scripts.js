@@ -1,7 +1,7 @@
 // jQuery.noConflict();
 (function($) {
     $(document).ready(function() {
-         $(window).resize();
+        $(window).resize();
     });
     
     $(window).resize(function() {

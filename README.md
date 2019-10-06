@@ -4,7 +4,7 @@ This is a JavaScript variant of the [SCSS mixins](https://github.com/twbs/bootst
 
 See also [Responsive Breakpoints](https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints).
 
-Works only with Bootstrap 4.
+Works only with Bootstrap 4 and higher.
 
 ## Available at [NPM](https://www.npmjs.com/package/bootstrap-breakpoint)
 
@@ -35,10 +35,15 @@ if (bootstrapBreakpoint('between', ['sm','lg'])) {
 if (bootstrapBreakpoint('only', 'xs')) {
     // code if window width is in range of xs
 }
+
+// adding further breakpoints
+BootstrapBreakpoint.breakpoints.push('xxl');
+BootstrapBreakpoint.init();
+// or 
+BootstrapBreakpoint.breakpoints = ["xs", "sm", "md", "lg", "xl", "xxl"];
+BootstrapBreakpoint.init();
 ```
 
 ## Examples
 * [HTML](https://github.com/InsanityMeetsHH/bootstrap-breakpoint/blob/master/example/index.html)
 * [JavaScript](https://github.com/InsanityMeetsHH/bootstrap-breakpoint/blob/master/example/js/scripts.js)
-
-**This software is in development. Could have bugs.**
