@@ -5,7 +5,7 @@ var browserSync = require('browser-sync').create();
 
 var sourcePath  = "src/";
 var distPath    = "dist/";
-var localServer = 'http://localhost/imhh-bb/example/';
+var localServer = 'http://localhost:7717';
 
 // create minified and non minified files
 gulp.task('js', function() {

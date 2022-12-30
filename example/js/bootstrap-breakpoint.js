@@ -1,3 +1,7 @@
+/** 
+ * THIS IS A MODIFIED VERSION
+ * init() is changed for example page
+ */
 var BootstrapBreakpoint = {
     breakpoints: ['xs','sm','md','lg','xl','xxl'],
     
@@ -15,9 +19,9 @@ var BootstrapBreakpoint = {
             var template = '<div class="bsbp-container">';
             for (var i = 0; i < BootstrapBreakpoint.breakpoints.length; i++) {
                 if (i === 0) {
-                    template += '<div class="d-' + BootstrapBreakpoint.breakpoints[i] + '-block"></div>';
+                    template += '<div class="d-' + BootstrapBreakpoint.breakpoints[i] + '-block">div - ' + BootstrapBreakpoint.breakpoints[i] + '</div>';
                 } else {
-                    template += '<div class="d-none d-' + BootstrapBreakpoint.breakpoints[i] + '-block"></div>';
+                    template += '<div class="d-none d-' + BootstrapBreakpoint.breakpoints[i] + '-block">div - ' + BootstrapBreakpoint.breakpoints[i] + '</div>';
                 }
             }
             template += '</div>';

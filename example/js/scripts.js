@@ -30,6 +30,10 @@
             $('.current-up').append(', XL');
         }
         
+        if (bootstrapBreakpoint('up', 'xxl')) {
+            $('.current-up').append(', XXL');
+        }
+        
         if (bootstrapBreakpoint('down', 'xs')) {
             $('.current-down').append('XS, ');
         }
@@ -47,7 +51,11 @@
         }
         
         if (bootstrapBreakpoint('down', 'xl')) {
-            $('.current-down').append('XL');
+            $('.current-down').append('XL, ');
+        }
+        
+        if (bootstrapBreakpoint('down', 'xxl')) {
+            $('.current-down').append('XXL');
         }
         
         if (bootstrapBreakpoint('only', 'xs')) {
@@ -70,6 +78,10 @@
             $('.current-only').text('XL');
         }
         
+        if (bootstrapBreakpoint('only', 'xxl')) {
+            $('.current-only').text('XXL');
+        }
+        
         if (bootstrapBreakpoint('between', ['xs','sm'])) {
             $('.current-between').append('XS - SM<br/>');
         }
@@ -86,6 +98,10 @@
             $('.current-between').append('XS - XL<br/>');
         }
         
+        if (bootstrapBreakpoint('between', ['xs','xxl'])) {
+            $('.current-between').append('XS - XXL<br/>');
+        }
+        
         if (bootstrapBreakpoint('between', ['sm','md'])) {
             $('.current-between').append('SM - MD<br/>');
         }
@@ -98,6 +114,10 @@
             $('.current-between').append('SM - XL<br/>');
         }
         
+        if (bootstrapBreakpoint('between', ['sm','xxl'])) {
+            $('.current-between').append('SM - XXL<br/>');
+        }
+        
         if (bootstrapBreakpoint('between', ['md','lg'])) {
             $('.current-between').append('MD - LG<br/>');
         }
@@ -106,8 +126,20 @@
             $('.current-between').append('MD - XL<br/>');
         }
         
+        if (bootstrapBreakpoint('between', ['md','xxl'])) {
+            $('.current-between').append('MD - XXL<br/>');
+        }
+        
         if (bootstrapBreakpoint('between', ['lg','xl'])) {
             $('.current-between').append('LG - XL<br/>');
+        }
+        
+        if (bootstrapBreakpoint('between', ['lg','xxl'])) {
+            $('.current-between').append('LG - XXL<br/>');
+        }
+        
+        if (bootstrapBreakpoint('between', ['xl','xxl'])) {
+            $('.current-between').append('XL - XXL<br/>');
         }
     });
 })(jQuery);

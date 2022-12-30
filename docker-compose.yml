@@ -1,0 +1,22 @@
+version: '3'
+
+volumes:
+    logs:
+        driver: local
+
+# docker-compose up -d
+services:
+    # http://localhost:7717
+    # docker exec -ti bootstrap-breakpoint php --version
+    webserver:
+        image: php:8-alpine
+        container_name: bootstrap-breakpoint
+        working_dir: /var/www
+        command: php -S 0.0.0.0:8080 -t example
+        environment:
+            docker: "true"
+        ports:
+            - 7717:8080
+        volumes:
+            - .:/var/www
+            - logs:/var/www/logs

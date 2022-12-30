@@ -1,5 +1,5 @@
 var BootstrapBreakpoint = {
-    breakpoints: ['xs','sm','md','lg','xl'],
+    breakpoints: ['xs','sm','md','lg','xl','xxl'],
     
     /**
      * Adds HTML to body
